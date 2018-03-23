@@ -84,8 +84,8 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.mysql' instead of the following.
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'polls',
-        'USER': '<your-database-user>',
-        'PASSWORD': '<your-database-password>',
+        'USER': 'root',
+        'PASSWORD': '',
         # For MySQL, set 'PORT': '3306' instead of the following. Any Cloud
         # SQL Proxy instances running locally must also be set to tcp:3306.
         'PORT': '5432',
@@ -94,7 +94,7 @@ DATABASES = {
 # In the flexible environment, you connect to CloudSQL using a unix socket.
 # Locally, you can use the CloudSQL proxy to proxy a localhost connection
 # to the instance
-DATABASES['default']['HOST'] = '/cloudsql/<your-cloudsql-connection-string>'
+DATABASES['default']['HOST'] = '/cloudsql/ct-diligent-198822:us-east1:diligent'
 if os.getenv('GAE_INSTANCE'):
     pass
 else:
